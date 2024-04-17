@@ -1,0 +1,2 @@
+# kupit-kartinu
+ 
