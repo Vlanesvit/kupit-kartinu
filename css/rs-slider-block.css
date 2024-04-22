@@ -1,0 +1,12 @@
+.rs-slider-block__slide {
+  position: relative;
+}
+.rs-slider-block__slide:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -55px;
+  height: 100%;
+  width: 1px;
+  background-color: #f3f3f3;
+}

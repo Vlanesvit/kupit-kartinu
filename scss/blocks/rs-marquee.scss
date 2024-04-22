@@ -1,0 +1,29 @@
+.rs-marquee {
+	padding: 44px 0px;
+	border-top: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
+	margin-bottom: 70px;
+
+	// .rs-line__wrapper
+	&__wrapper {
+	}
+
+	&__swiper {
+		transition-timing-function: linear !important;
+	}
+
+	&__slide {
+		min-height: 1px;
+		height: auto;
+		width: auto !important;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}

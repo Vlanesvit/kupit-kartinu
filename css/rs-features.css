@@ -1,0 +1,40 @@
+@media (min-width: 991.98px) {
+  .rs-features__swiper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 54px;
+  }
+}
+.rs-features__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.rs-features__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+}
+.rs-features__desc {
+  margin-top: 50px;
+}
+.rs-features__desc h4 {
+  font-family: "Suisse Intl", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 110%;
+}
+.rs-features__desc p {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #858585;
+}

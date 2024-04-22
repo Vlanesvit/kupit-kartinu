@@ -1,0 +1,56 @@
+.rs-features {
+	// .rs-features__container
+	&__container {
+	}
+
+	// .rs-features__slider
+	&__slider {
+	}
+
+	// .rs-features__swiper
+	&__swiper {
+		@media (min-width: 991.98px) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 54px;
+		}
+	}
+
+	// .rs-features__slide
+	&__slide {
+	}
+
+	// .rs-features__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	// .rs-features__icon
+	&__icon {
+		flex: 0 0 50px;
+	}
+
+	// .rs-features__desc
+	&__desc {
+		margin-top: 50px;
+
+		h4 {
+			font-family: "Suisse Intl", sans-serif;
+			font-weight: 400;
+			font-size: 22px;
+			// line-height: 24px;
+			line-height: 110%;
+		}
+
+		p {
+			margin-top: 10px;
+			font-weight: 400;
+			font-size: 16px;
+			// line-height: 21px;
+			line-height: 130%;
+			color: #858585;
+		}
+	}
+}
