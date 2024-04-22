@@ -1,0 +1,8 @@
+@media (max-width: 767.98px) {
+  .rs-auction__slider {
+    overflow: visible;
+  }
+}
+.rs-auction__slide .product__picture {
+  padding-bottom: 60.924%;
+}

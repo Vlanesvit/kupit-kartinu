@@ -15,6 +15,16 @@ function menuFunction() {
 						if (document.documentElement.classList.contains("menu-open")) {
 							menuClose("menu-open");
 						} else {
+
+							if (document.documentElement.classList.contains('catalog-open') ||
+								document.documentElement.classList.contains('search-open') ||
+								document.documentElement.classList.contains('cart-open')) {
+
+								document.documentElement.classList.remove('catalog-open')
+								document.documentElement.classList.remove('search-open')
+								document.documentElement.classList.remove('cart-open')
+							}
+
 							menuOpen("menu-open")
 						}
 					});
@@ -140,6 +150,18 @@ function menuFunction() {
 				if (document.documentElement.classList.contains(classes)) {
 					menuClose(classes);
 				} else {
+
+					if (document.documentElement.classList.contains('menu-open') ||
+						document.documentElement.classList.contains('catalog-open') ||
+						document.documentElement.classList.contains('search-open') ||
+						document.documentElement.classList.contains('cart-open')) {
+
+						document.documentElement.classList.remove('menu-open')
+						document.documentElement.classList.remove('catalog-open')
+						document.documentElement.classList.remove('search-open')
+						document.documentElement.classList.remove('cart-open')
+					}
+
 					menuOpen(classes)
 				}
 			})

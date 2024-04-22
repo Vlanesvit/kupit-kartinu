@@ -1,6 +1,18 @@
 section {
 	position: relative;
 	margin: 94px 0px;
+
+	@media (max-width: 1439.98px) {
+		margin: 60px 0px;
+	}
+
+	@media (max-width: 1169.98px) {
+		margin: 45px 0px;
+	}
+
+	@media (max-width: 991.98px) {
+		margin: 33px 0px;
+	}
 }
 
 // Text ========================================================================================================================================================
@@ -55,13 +67,20 @@ section {
 	font-weight: 400;
 	font-size: 16px;
 	color: #80766f;
+
+	@media (max-width: 1439.98px) {
+		font-size: 14px;
+	}
+
+	@media (max-width: 991.98px) {
+		font-size: 13px;
+	}
 }
 
 .animated-arrow {
 	display: inline-block;
 	position: relative;
 	transition: all 0.3s ease 0s;
-	padding-right: 14px;
 
 	.the-arrow {
 		width: 1px;
@@ -446,7 +465,6 @@ textarea.rs-input {
 }
 
 // Block  ========================================================================================================================================================
-
 .section-header {
 	display: flex;
 	align-items: center;
@@ -454,6 +472,21 @@ textarea.rs-input {
 	padding-bottom: 27px;
 	margin-bottom: 50px;
 	border-bottom: 1px solid #b7b7b7;
+
+	@media (max-width: 1439.98px) {
+		padding-bottom: 25px;
+		margin-bottom: 40px;
+	}
+
+	@media (max-width: 1169.98px) {
+		padding-bottom: 20px;
+		margin-bottom: 25px;
+	}
+
+	@media (max-width: 991.98px) {
+		padding-bottom: 8px;
+		margin-bottom: 10px;
+	}
 
 	// .section-header__title
 	&__title {
@@ -467,6 +500,18 @@ textarea.rs-input {
 			letter-spacing: 0.05em;
 			text-transform: uppercase;
 			color: #1a1a1a;
+
+			@media (max-width: 1439.98px) {
+				font-size: 18px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 16px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 13px;
+			}
 		}
 	}
 
@@ -482,7 +527,7 @@ textarea.rs-input {
 
 	// .product__picture
 	&__picture {
-		height: 450px;
+		padding-bottom: 100%;
 		position: relative;
 		border: 1px solid #d4d4d4;
 		overflow: hidden;
@@ -492,6 +537,9 @@ textarea.rs-input {
 	&__img {
 		width: 100%;
 		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
 
 		img {
 			width: 100%;
@@ -511,11 +559,30 @@ textarea.rs-input {
 		color: #fff;
 		text-align: center;
 
+		@media (max-width: 1439.98px) {
+			top: 20px;
+			right: 20px;
+		}
+
+		@media (max-width: 1169.98px) {
+			top: 15px;
+			right: 15px;
+		}
+
+		@media (max-width: 991.98px) {
+			top: 9px;
+			right: 7px;
+		}
+
 		& > h6 {
 			font-weight: 500;
 			font-size: 13px;
 			letter-spacing: 0.03em;
 			margin-bottom: 7px;
+
+			@media (max-width: 1439.98px) {
+				margin-bottom: 3.5px;
+			}
 		}
 
 		.timer {
@@ -532,6 +599,10 @@ textarea.rs-input {
 				font-size: 16px;
 				letter-spacing: 0.03em;
 
+				@media (max-width: 1439.98px) {
+					font-size: 13px;
+				}
+
 				&::before {
 					content: attr(data-title);
 					display: block;
@@ -546,6 +617,10 @@ textarea.rs-input {
 				&:not(:last-child) {
 					margin-right: 25px;
 
+					@media (max-width: 1439.98px) {
+						margin-right: 12px;
+					}
+
 					&::after {
 						content: ":";
 						position: absolute;
@@ -553,6 +628,12 @@ textarea.rs-input {
 						top: -2px;
 						font-size: 18px;
 						animation: opacityTimer 2s linear infinite;
+
+						@media (max-width: 1439.98px) {
+							font-size: 8px;
+							right: -6px;
+							top: 3px;
+						}
 					}
 
 					@keyframes opacityTimer {
@@ -582,6 +663,10 @@ textarea.rs-input {
 		justify-content: flex-start;
 		flex-grow: 1;
 
+		@media (max-width: 1439.98px) {
+			margin-top: 11px;
+		}
+
 		// .product__desc_body
 		&_body {
 			h6 {
@@ -589,6 +674,10 @@ textarea.rs-input {
 				font-size: 16px;
 				letter-spacing: 0.03em;
 				color: #858585;
+
+				@media (max-width: 1439.98px) {
+					font-size: 13px;
+				}
 			}
 
 			h4 {
@@ -598,6 +687,11 @@ textarea.rs-input {
 				// line-height: 24px;
 				line-height: 110%;
 				margin-top: 7px;
+
+				@media (max-width: 1439.98px) {
+					margin-top: 7px;
+					font-size: 16px;
+				}
 			}
 		}
 
@@ -605,9 +699,13 @@ textarea.rs-input {
 			width: 100%;
 			margin-top: 23px;
 
+			@media (max-width: 991.98px) {
+				margin-top: 10px;
+			}
+
 			table {
 				width: 100%;
-				table-layout: fixed;
+				// table-layout: fixed;
 				border-spacing: 0px;
 				border-collapse: 0px;
 
@@ -622,11 +720,24 @@ textarea.rs-input {
 							letter-spacing: 0.03em;
 							color: #858585;
 
+							@media (max-width: 1439.98px) {
+								font-size: 13px;
+								padding: 11px 0px 9.5px;
+							}
+
+							&:first-child {
+								max-width: 150px;
+							}
+
 							&:last-child {
 								font-weight: 400;
 								font-size: 16px;
 								text-align: right;
 								color: #000;
+
+								@media (max-width: 1439.98px) {
+									font-size: 13px;
+								}
 							}
 						}
 
@@ -636,6 +747,10 @@ textarea.rs-input {
 									font-weight: 600;
 									font-size: 22px;
 									letter-spacing: 0px;
+
+									@media (max-width: 1439.98px) {
+										font-size: 18px;
+									}
 								}
 							}
 						}
@@ -649,10 +764,19 @@ textarea.rs-input {
 			margin-top: 20px;
 			width: 100%;
 
+			@media (max-width: 1439.98px) {
+				margin-top: 10px;
+			}
+
 			.rs-btn {
 				width: 100%;
 				padding-top: 16px;
 				padding-bottom: 16px;
+
+				@media (max-width: 1439.98px) {
+					padding-top: 18px;
+					padding-bottom: 18px;
+				}
 			}
 		}
 	}

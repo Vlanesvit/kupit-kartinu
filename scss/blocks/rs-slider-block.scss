@@ -5,6 +5,9 @@
 
 	// .rs-slider-block__slider
 	&__slider {
+		@media (max-width: 767.98px) {
+			overflow: visible;
+		}
 	}
 
 	// .rs-slider-block__swiper

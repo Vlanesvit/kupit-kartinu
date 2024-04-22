@@ -175,12 +175,17 @@ function initSliders() {
 					breakpoints: {
 						320: {
 							slidesPerView: 1,
-							spaceBetween: 24,
+							spaceBetween: 30,
+							grid: {
+								fill: 'row',
+								rows: 2,
+							},
 						},
-						1169.98: {
+						767.98: {
+							slidesPerView: 2,
 							spaceBetween: 30,
 						},
-						1439.98: {
+						1601.98: {
 							slidesPerView: 2,
 							spaceBetween: 98,
 						},
@@ -259,12 +264,17 @@ function initSliders() {
 					breakpoints: {
 						320: {
 							slidesPerView: 1,
-							spaceBetween: 24,
-						},
-						1169.98: {
 							spaceBetween: 30,
 						},
-						1439.98: {
+						767.98: {
+							slidesPerView: 2,
+							spaceBetween: 30,
+						},
+						1169.98: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+						1601.98: {
 							slidesPerView: 3,
 							spaceBetween: 110,
 						},
@@ -322,7 +332,7 @@ function initSliders() {
 					touchStartPreventDefault: false,
 
 					// Цикличность слайдера
-					// loop: true,
+					loop: true,
 
 					// Анимация переключения
 					// effect: 'fade',
@@ -410,6 +420,21 @@ function initSliders() {
 
 			slidesPerView: 7.5,
 			spaceBetween: 100,
+
+			breakpoints: {
+				320: {
+					spaceBetween: 55,
+				},
+				767.98: {
+					spaceBetween: 70,
+				},
+				1169.98: {
+					spaceBetween: 85,
+				},
+				1601.98: {
+					spaceBetween: 100,
+				},
+			},
 
 			on: {
 				init: function loopBagFix(swiper) {
@@ -509,14 +534,11 @@ function initSliders() {
 					breakpoints: {
 						320: {
 							slidesPerView: 1,
-							spaceBetween: 24,
-						},
-						1169.98: {
 							spaceBetween: 30,
 						},
-						1439.98: {
-							slidesPerView: 3,
-							spaceBetween: 110,
+						539.98: {
+							slidesPerView: 2,
+							spaceBetween: 30,
 						},
 					},
 				});
@@ -612,15 +634,12 @@ function initSliders() {
 					// Брекпоинты (адаптив)
 					breakpoints: {
 						320: {
-							slidesPerView: 1,
-							spaceBetween: 24,
+							slidesPerView: 1.375,
+							spaceBetween: 53,
 						},
-						1169.98: {
-							spaceBetween: 30,
-						},
-						1439.98: {
-							slidesPerView: 3,
-							spaceBetween: 110,
+						539.98: {
+							slidesPerView: 2,
+							spaceBetween: 53,
 						},
 					},
 				});

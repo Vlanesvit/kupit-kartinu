@@ -1,0 +1,17 @@
+.rs-auction {
+	&__slider {
+		@media (max-width: 767.98px) {
+			overflow: visible;
+		}
+	}
+	
+	// .rs-auction__slide
+	&__slide {
+		.product {
+			// .product__picture
+			&__picture {
+				padding-bottom: 60.924%;
+			}
+		}
+	}
+}

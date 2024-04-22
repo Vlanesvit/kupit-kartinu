@@ -90,8 +90,14 @@
 
 	svg {
 		path {
+			stroke-width: 1;
+			stroke-opacity: 1;
 			stroke: rgba(0, 0, 0, 0.4);
 			transition: stroke 0.3s ease 0s;
+
+			@media (max-width: 991.98px) {
+				stroke: rgba(0, 0, 0, 1);
+			}
 		}
 	}
 
@@ -131,6 +137,10 @@
 	letter-spacing: -0.07em;
 	font-size: 14px;
 	color: #858585;
+
+	@media (max-width: 991.98px) {
+		font-size: 13px;
+	}
 }
 
 .swiper-pagination {
@@ -183,8 +193,16 @@
 	align-items: center;
 	margin-top: 30px;
 
+	@media (max-width: 1439.98px) {
+		margin-top: 22px;
+	}
+
 	.swiper-pagination {
 		margin-left: 30.5px;
+
+		@media (max-width: 1439.98px) {
+			margin-left: 18.5px;
+		}
 	}
 }
 
