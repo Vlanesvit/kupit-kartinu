@@ -1,5 +1,6 @@
 .rs-product-block {
   margin-top: 0px;
+  overflow: unset;
 }
 @media (min-width: 991.98px) {
   .rs-product-block__wrapper {
@@ -11,6 +12,13 @@
 @media (min-width: 991.98px) {
   .rs-product-block__pictures {
     grid-column: 1/3;
+  }
+}
+@media (min-width: 991.98px) {
+  .rs-product-block__block {
+    position: sticky;
+    top: 10px;
+    left: 0;
   }
 }
 .rs-product-block__slider {

@@ -1,5 +1,6 @@
 .rs-content {
 	margin-top: 0px;
+	overflow: unset;
 
 	// .rs-content__container
 	&__container {
@@ -93,6 +94,9 @@
 	&__filters {
 		@media (min-width: 1439.98px) {
 			margin-top: -50px;
+			position: sticky;
+			top: 150px;
+			left: 0;
 		}
 
 		@media (max-width: 991.98px) {
@@ -257,6 +261,12 @@
 .rs-auction {
 	// .rs-auction__timer
 	&__timer {
+		@media (min-width: 991.98px) {
+			position: sticky;
+			top: 150px;
+			left: 0;
+		}
+
 		@media (max-width: 991.98px) {
 			margin-bottom: 20px;
 		}

@@ -769,7 +769,7 @@
 			<link rel="stylesheet" href="css/rs-auction.css">
 			<section class="rs-auction">
 				<div class="rs-auction__container">
-					<div class="section-header">
+					<div class="section-header" data-aos="fade-up" data-aos-delay="100">
 						<div class="section-header__title">
 							<h2>Текущие аукционы</h2>
 						</div>
@@ -2047,6 +2047,8 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>AOS.init({ duration: 1000, easing: "ease-out-quart", once: true });</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 	<script src="js/rs-sliders-init.js"></script>

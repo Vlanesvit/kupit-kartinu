@@ -1,5 +1,6 @@
 .rs-product-block {
 	margin-top: 0px;
+	overflow: unset;
 
 	// .rs-product-block__container
 	&__container {
@@ -18,6 +19,14 @@
 	&__pictures {
 		@media (min-width: 991.98px) {
 			grid-column: 1/3;
+		}
+	}
+
+	&__block {
+		@media (min-width: 991.98px) {
+			position: sticky;
+			top: 10px;
+			left: 0;
 		}
 	}
 
