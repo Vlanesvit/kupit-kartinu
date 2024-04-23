@@ -650,6 +650,131 @@ function initSliders() {
 		breakpointChecker();
 	}
 
+	if (document.querySelector('.rs-product-block__slider')) {
+		const sliderBlocks = document.querySelectorAll('.rs-product-block');
+
+		sliderBlocks.forEach(slider => {
+			const sliderSwiper = slider.querySelector('.rs-product-block__slider');
+			const thumbsSwiper = slider.querySelector('.rs-product-block__thumbs_slider');
+			const arrowPrev = slider.querySelector('.rs-product-block__button-prev');
+			const arrowNext = slider.querySelector('.rs-product-block__button-next');
+
+			const swiperThumbs = new Swiper(thumbsSwiper, {
+				// // Автопрокрутка
+				// autoplay: {
+				// 	// Пауза между прокруткой
+				// 	delay: 5000,
+				// 	// Закончить на последнем слайде
+				// 	stopOnLastSlide: false,
+				// 	// Отключить после ручного переключения
+				// 	disableOnInteraction: false,
+				// },
+
+				// Обновить свайпер
+				// при изменении элементов слайдера
+				observer: true,
+				// при изменении родительских элементов слайдера
+				observeParents: true,
+				// при изменении дочерних элементов слайдера
+				observeSlideChildren: true,
+
+				// Скорость смены слайдов
+				speed: 500,
+
+				// Слежка за слайдером
+				watchOverflow: true,
+
+				// Включение/отключение
+				// перетаскивание на ПК
+				simulateTouch: true,
+				// Чувствительность свайпа
+				touchRadio: 1,
+				// Угол срабатывания свайпа/перетаскивания
+				touchAngle: 45,
+
+				// Брейкпоинты(адаптив)
+				// Шрина экрана
+				breakpoints: {
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					540: {
+						slidesPerView: 4,
+						spaceBetween: 12,
+					},
+					991.98: {
+						slidesPerView: 5.5,
+						spaceBetween: 15,
+					},
+				},
+			});
+
+			const swiperMain = new Swiper(sliderSwiper, {
+				// Автопрокрутка
+				autoplay: {
+					// Пауза между прокруткой
+					delay: 10000,
+					// Закончить на последнем слайде
+					stopOnLastSlide: false,
+					// Отключить после ручного переключения
+					disableOnInteraction: false,
+				},
+
+				// Слияние слайдеров
+				thumbs: {
+					swiper: swiperThumbs,
+				},
+				// Слежка за слайдером
+				watchOverflow: true,
+
+				// Кол-во показываемых слайдов
+				slidesPerView: 1,
+				spaceBetween: 30,
+
+
+				// Обновить свайпер
+				// при изменении элементов слайдера
+				observer: true,
+				// при изменении родительских элементов слайдера
+				observeParents: true,
+				// при изменении дочерних элементов слайдера
+				observeSlideChildren: true,
+
+				// Скорость смены слайдов
+				speed: 800,
+
+				// Включение/отключение
+				// перетаскивание на ПК
+				simulateTouch: true,
+				allowTouchMove: true,
+				// Чувствительность свайпа
+				touchRadio: 1,
+				// Угол срабатывания свайпа/перетаскивания
+				touchAngle: 45,
+				// Cобытие touchstart (pointerdown)
+				touchStartPreventDefault: false,
+
+				// Цикличность слайдера
+				loop: true,
+
+				// Анимация переключения
+				// effect: 'fade',
+
+				// Курсор перетаскивания
+				grabCursor: true,
+
+				// Стрелки
+				navigation: {
+					prevEl: arrowPrev,
+					nextEl: arrowNext,
+				},
+			});
+
+
+		});
+	}
+
 	function addZero(num) {
 		return (num > 9) ? num : '0' + num;
 	}
