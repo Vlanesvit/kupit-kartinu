@@ -44,7 +44,7 @@ function initSliders() {
 					// Включение/отключение
 					// перетаскивание на ПК
 					simulateTouch: true,
-					allowTouchMove: true,
+					allowTouchMove: false,
 					// Чувствительность свайпа
 					touchRadio: 1,
 					// Угол срабатывания свайпа/перетаскивания
@@ -356,7 +356,9 @@ function initSliders() {
 					},
 
 					watchSlidesProgress: true,
+
 					direction: 'vertical',
+
 					on: {
 						progress: function () {
 							let swiper = this;
@@ -379,7 +381,17 @@ function initSliders() {
 									speed + "ms";
 							}
 						}
-					}
+					},
+
+					// Брекпоинты (адаптив)
+					breakpoints: {
+						320: {
+							loop: true,
+						},
+						991.98: {
+							loop: false,
+						},
+					},
 				});
 			});
 		});
@@ -687,6 +699,7 @@ function initSliders() {
 				// Включение/отключение
 				// перетаскивание на ПК
 				simulateTouch: true,
+				allowTouchMove: true,
 				// Чувствительность свайпа
 				touchRadio: 1,
 				// Угол срабатывания свайпа/перетаскивания
@@ -725,6 +738,7 @@ function initSliders() {
 				thumbs: {
 					swiper: swiperThumbs,
 				},
+			
 				// Слежка за слайдером
 				watchOverflow: true,
 
@@ -755,9 +769,6 @@ function initSliders() {
 				// Cобытие touchstart (pointerdown)
 				touchStartPreventDefault: false,
 
-				// Цикличность слайдера
-				loop: true,
-
 				// Анимация переключения
 				// effect: 'fade',
 
@@ -769,9 +780,9 @@ function initSliders() {
 					prevEl: arrowPrev,
 					nextEl: arrowNext,
 				},
+
+				slideToClickedSlide: true,
 			});
-
-
 		});
 	}
 

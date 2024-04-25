@@ -773,7 +773,7 @@ textarea.rs-input {
 .section-header__title h1,
 .section-header__title h2 {
   font-family: "Suisse Int'l", sans-serif;
-  font-weight: 450;
+  font-weight: 400;
   font-size: 22px;
   line-height: 110%;
   letter-spacing: 0.05em;
@@ -1714,6 +1714,11 @@ textarea.rs-input {
 .popup-place-bet .popup__content {
   max-width: 533px;
 }
+@media (max-width: 991.98px) {
+  .popup-history-bet .popup__content {
+    padding: 28px 10px 28px 10px;
+  }
+}
 
 .popup__text > h2 {
   font-family: "Suisse Intl", sans-serif;
@@ -2104,7 +2109,7 @@ textarea.rs-input {
   color: #fff;
 }
 .pagging__more {
-  margin: 0px 30px;
+  margin: 0px 40px;
 }
 @media (max-width: 1169.98px) {
   .pagging__more {

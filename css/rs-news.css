@@ -80,7 +80,7 @@
   .rs-news__slide:not(:first-child) .rs-news__desc {
     margin-left: 30px;
     margin-top: 0px;
-    max-width: 335px;
+    max-width: 340px;
   }
 }
 @media (min-width: 991.98px) and (max-width: 1439.98px) {

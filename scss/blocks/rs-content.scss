@@ -1,6 +1,15 @@
 .rs-content {
+	padding-top: 40px;
 	margin-top: 0px;
 	overflow: unset;
+
+	@media (max-width: 1439.98px) {
+		padding-top: 20px;
+	}
+
+	@media (max-width: 991.98px) {
+		padding-top: 0px;
+	}
 
 	// .rs-content__container
 	&__container {
@@ -10,15 +19,12 @@
 	&__wrapper {
 		border-top: 1px solid #b7b7b7;
 		padding-top: 60px;
-		margin-top: 40px;
 
 		@media (max-width: 1439.98px) {
 			padding-top: 30px;
-			margin-top: 20px;
 		}
 
 		@media (max-width: 991.98px) {
-			margin-top: 0px;
 			padding-top: 15px;
 		}
 
@@ -194,7 +200,7 @@
 						width: 20px;
 						height: 20px;
 						margin: auto;
-						background-image: url("../../img/icons/chevron-up.svg");
+						background-image: url("../img/icons/chevron-up.svg");
 						background-repeat: no-repeat;
 						background-position: center;
 						background-size: contain;
