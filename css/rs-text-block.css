@@ -2,8 +2,9 @@
   margin: 0;
 }
 .rs-text-block__wrapper {
-  padding: 64px 0px 25px;
   border-top: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+  padding: 64px 0px 25px;
 }
 @media (max-width: 1439.98px) {
   .rs-text-block__wrapper {
@@ -33,6 +34,24 @@
             justify-content: space-between;
   }
 }
+.rs-artists-block .rs-text-block__wrapper {
+  padding: 62px 0px;
+}
+@media (max-width: 1439.98px) {
+  .rs-artists-block .rs-text-block__wrapper {
+    padding: 40px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-artists-block .rs-text-block__wrapper {
+    padding: 25px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-artists-block .rs-text-block__wrapper {
+    padding: 15px 0px;
+  }
+}
 .rs-text-block__img {
   width: 100%;
 }
@@ -55,18 +74,30 @@
     max-width: 880px;
     margin-left: 30px;
   }
+  .rs-artists-block .rs-text-block__desc {
+    margin-right: 30px;
+    margin-left: 0px;
+  }
 }
 @media (max-width: 767.98px) {
   .rs-text-block__desc {
     margin-top: 15px;
   }
+  .rs-artists-block .rs-text-block__desc {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
 }
 .rs-text-block__desc h1 {
+  font-family: "Suisse Intl", sans-serif;
   font-weight: 400;
   font-size: 50px;
   line-height: 110%;
   padding-bottom: 15px;
   border-bottom: 1px solid #e8e8e8;
+}
+.rs-artists-block .rs-text-block__desc h1 {
+  border: none;
 }
 @media (max-width: 1439.98px) {
   .rs-text-block__desc h1 {
@@ -90,6 +121,9 @@
   line-height: 150%;
   margin-top: 20px;
 }
+.rs-artists-block .rs-text-block__desc h5 {
+  color: #858585;
+}
 @media (max-width: 1439.98px) {
   .rs-text-block__desc h5 {
     font-size: 18px;
@@ -104,6 +138,41 @@
   .rs-text-block__desc h5 {
     font-size: 13px;
     margin-top: 10px;
+  }
+}
+.rs-text-block__desc .rs-text-block__head {
+  margin-bottom: 32px;
+  margin-top: 0px;
+}
+@media (max-width: 1439.98px) {
+  .rs-text-block__desc .rs-text-block__head {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-text-block__desc .rs-text-block__head {
+    margin-bottom: 15px;
+  }
+}
+.rs-text-block__desc p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #858585;
+}
+@media (max-width: 1439.98px) {
+  .rs-text-block__desc p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-text-block__desc p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-text-block__desc p {
+    font-size: 13px;
   }
 }
 .rs-text-block__desc ul {

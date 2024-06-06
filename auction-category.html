@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=, initial-scale=1.0" />
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+	<link rel="stylesheet" href="lib/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="lib/fancybox.css" />
+	<link rel="stylesheet" href="lib/aos.css" />
 	<link rel="stylesheet" href="css/rs-style.css" />
 
 	<title>Советская живопись - Kupid Kartinu</title>
@@ -674,31 +674,33 @@
 
 		<main class="page">
 
-			<div class="rs-breadcrumbs">
+			<div class="rs-breadcrumbs no-border">
 				<div class="rs-breadcrumbs__container">
-					<nav class="rs-breadcrumbs__navigation">
-						<ul itemscope itemtype="http://schema.org/BreadcrumbList" class="rs-breadcrumbs__list">
-							<li class="rs-breadcrumbs__item" itemprop="itemListElement" itemscope
-								itemtype="http://schema.org/ListItem">
-								<a class="rs-breadcrumbs__link" href="home.html" itemprop="item" typeof="WebPage">
-									<span itemprop="name">Главная</span>
-								</a>
-								<meta itemprop="position" content="1">
-							</li>
-							<li class="rs-breadcrumbs__item" itemprop="itemListElement" itemscope
-								itemtype="http://schema.org/ListItem">
-								<a class="rs-breadcrumbs__link" href="#" itemprop="item" typeof="WebPage">
-									<span itemprop="name">Аукцион</span>
-								</a>
-								<meta itemprop="position" content="2">
-							</li>
-							<li class="rs-breadcrumbs__item" itemprop="itemListElement" itemscope=""
-								itemtype="http://schema.org/ListItem">
-								<span itemprop="name">Советская живопись</span>
-								<meta itemprop="position" content="3">
-							</li>
-						</ul>
-					</nav>
+					<div class="rs-breadcrumbs__block">
+						<nav class="rs-breadcrumbs__navigation">
+							<ul itemscope itemtype="http://schema.org/BreadcrumbList" class="rs-breadcrumbs__list">
+								<li class="rs-breadcrumbs__item" itemprop="itemListElement" itemscope
+									itemtype="http://schema.org/ListItem">
+									<a class="rs-breadcrumbs__link" href="home.html" itemprop="item" typeof="WebPage">
+										<span itemprop="name">Главная</span>
+									</a>
+									<meta itemprop="position" content="1">
+								</li>
+								<li class="rs-breadcrumbs__item" itemprop="itemListElement" itemscope
+									itemtype="http://schema.org/ListItem">
+									<a class="rs-breadcrumbs__link" href="#" itemprop="item" typeof="WebPage">
+										<span itemprop="name">Аукцион</span>
+									</a>
+									<meta itemprop="position" content="2">
+								</li>
+								<li class="rs-breadcrumbs__item" itemprop="itemListElement" itemscope=""
+									itemtype="http://schema.org/ListItem">
+									<span itemprop="name">Советская живопись</span>
+									<meta itemprop="position" content="3">
+								</li>
+							</ul>
+						</nav>
+					</div>
 				</div>
 			</div>
 
@@ -2972,10 +2974,10 @@
 
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="lib/fancybox.umd.js"></script>
+	<script src="lib/aos.js"></script>
+	<script src="lib/swiper-bundle.min.js"></script>
+	<script src="lib/gsap.min.js"></script>
 	<script src="js/rs-sliders-init.js"></script>
 	<script src="js/timer.js"></script>
 	<script src="js/rs-script.js"></script>

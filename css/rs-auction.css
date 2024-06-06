@@ -1,3 +1,8 @@
+@media (min-width: 1169.98px) {
+  .rs-auction {
+    margin-top: 50px;
+  }
+}
 @media (max-width: 767.98px) {
   .rs-auction__slider {
     overflow: visible;
@@ -5,4 +10,41 @@
 }
 .rs-auction__slide .product__picture {
   padding-bottom: 60.924%;
+}
+.rs-auction__swiper:not(.swiper-wrapper) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+  margin: -25px -46px;
+}
+@media (max-width: 1439.98px) {
+  .rs-auction__swiper:not(.swiper-wrapper) {
+    margin: -15px;
+  }
+}
+.rs-auction__swiper:not(.swiper-wrapper) .rs-auction__slide {
+  padding: 25px 46px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+@media (max-width: 1439.98px) {
+  .rs-auction__swiper:not(.swiper-wrapper) .rs-auction__slide {
+    padding: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-auction__swiper:not(.swiper-wrapper) .rs-auction__slide {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+@media (min-width: 1439.98px) {
+  .rs-auction .padding {
+    margin-top: 50px;
+  }
 }

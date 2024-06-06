@@ -1,0 +1,255 @@
+.rs-grid-block {
+	margin-top: 0px;
+
+	.grid-4 {
+	}
+
+	// .rs-grid-block__container
+	&__container {
+	}
+
+	// .rs-grid-block__filter
+	&__filter {
+		margin-bottom: 50px;
+		padding: 30px 0px;
+		border-bottom: 1px solid #b7b7b7;
+
+		@media (max-width: 1439.98px) {
+			margin-bottom: 30px;
+			padding: 15px 0px;
+		}
+
+		// .rs-grid-block__filter_list
+		&_list {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -6px;
+
+			@media (max-width: 1439.98px) {
+				margin: -3px;
+			}
+		}
+
+		// .rs-grid-block__filter_item
+		&_item {
+			padding: 6px;
+
+			@media (max-width: 1439.98px) {
+				padding: 3px;
+			}
+
+			&:first-child {
+				@media (max-width: 991.98px) {
+					width: 100%;
+					flex: 1 1 100%;
+				}
+
+				.radio__label {
+					@media (min-width: 991.98px) {
+						width: auto !important;
+						border: none !important;
+						background-color: #fff !important;
+						color: #000 !important;
+					}
+
+					@media (max-width: 991.98px) {
+						width: 100%;
+						flex: 1 1 100%;
+					}
+				}
+			}
+
+			.radio {
+				position: relative;
+
+				label {
+					input {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						font-size: 0px;
+						opacity: 0;
+						z-index: 1;
+						cursor: pointer;
+					}
+
+					input:checked ~ .radio__label {
+						background-color: #000;
+						color: #fff;
+					}
+				}
+
+				// .radio__label
+				&__label {
+					width: 40px;
+					height: 40px;
+					border: 1px solid #000;
+					background-color: transparent;
+					font-weight: 400;
+					font-size: 14px;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: all 0.3s ease 0s;
+
+					@media (max-width: 1439.98px) {
+						font-size: 12px;
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	// .rs-grid-block__wrapper
+	&__wrapper {
+		margin-top: 30px;
+
+		@media (max-width: 991.98px) {
+			margin-top: 15px;
+		}
+	}
+
+	// .rs-grid-block__list
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 50px 40px;
+
+		@media (max-width: 1439.98px) {
+			gap: 30px 25px;
+		}
+
+		@media (max-width: 1169.98px) {
+			gap: 30px 20px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: 767.98px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: 539.98px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .rs-grid-block__item
+	&__item {
+		width: 100%;
+		height: 100%;
+	}
+
+	// .rs-grid-block__link
+	&__link {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	// .rs-grid-block__img
+	&__img {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		padding-bottom: 84.414%;
+		border: 1px solid #d4d4d4;
+
+		.rs-news-block & {
+			padding-bottom: 74%;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__tag {
+		border-radius: 3px;
+		padding: 5px 15px;
+		background: #eeeff1;
+		display: inline-block;
+		font-weight: 400;
+		font-size: 16px;
+		// line-height: 22px;
+		line-height: 140%;
+		color: #000;
+		margin-bottom: 8px;
+
+		@media (max-width: 991.98px) {
+			font-size: 14px;
+		}
+	}
+
+	// .rs-grid-block__desc
+	&__desc {
+		margin-top: 12px;
+
+		p {
+			font-weight: 400;
+			font-size: 14px;
+			color: #858585;
+			// line-height: 20px;
+			line-height: 140%;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow-y: hidden;
+		}
+
+		h4 {
+		}
+
+		h5 {
+			font-weight: 400;
+			font-size: 18px;
+			// line-height: 27px;
+			line-height: 150%;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow-y: hidden;
+
+			@media (max-width: 1439.98px) {
+				font-size: 16px;
+			}
+		}
+
+		h6 {
+			font-weight: 400;
+			font-size: 16px;
+			color: #000;
+
+			@media (max-width: 1439.98px) {
+				font-size: 14px;
+			}
+		}
+
+		&-head {
+			margin-bottom: 4px;
+		}
+
+		&-body {
+		}
+
+		&-footer {
+			margin-top: 12px;
+
+			h6 {
+				margin-top: 4px;
+			}
+		}
+	}
+}

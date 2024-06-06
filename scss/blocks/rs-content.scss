@@ -17,7 +17,6 @@
 
 	// .rs-content__wrapper
 	&__wrapper {
-		border-top: 1px solid #b7b7b7;
 		padding-top: 60px;
 
 		@media (max-width: 1439.98px) {
@@ -39,6 +38,12 @@
 				padding-top: 80px;
 			}
 		}
+
+		@media (min-width: 1439.98px) {
+			.rs-rules & {
+				padding-top: 30px;
+			}
+		}
 	}
 
 	// .rs-content__sidebar
@@ -50,7 +55,7 @@
 	// .rs-content__block
 	&__block {
 		@media (min-width: 991.98px) {
-			grid-column: 2/5;
+			grid-column: span 3;
 		}
 	}
 
@@ -93,6 +98,160 @@
 			row-gap: 30px;
 		}
 	}
+
+	// .rs-content__desc
+	&__desc {
+		ol {
+			list-style: none;
+			counter-reset: li;
+		}
+
+		& > ol {
+			& > li {
+				font-weight: 400;
+				font-size: 22px;
+				// line-height: 24px;
+				line-height: 110%;
+				letter-spacing: 0.05em;
+				color: #1a1a1a;
+
+				@media (max-width: 1439.98px) {
+					font-size: 18px;
+				}
+
+				@media (max-width: 1169.98px) {
+					font-size: 16px;
+				}
+
+				&::before {
+					content: counters(li, ".", upper-roman) ". ";
+					counter-increment: li;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 60px;
+
+					@media (max-width: 1439.98px) {
+						margin-top: 45px;
+					}
+
+					@media (max-width: 1169.98px) {
+						margin-top: 30px;
+					}
+				}
+
+				& > ol {
+					margin-top: 30px;
+
+					@media (max-width: 1439.98px) {
+						margin-top: 20px;
+					}
+
+					@media (max-width: 1169.98px) {
+						margin-top: 15px;
+					}
+
+					& > li {
+						font-weight: 400;
+						font-size: 18px;
+						// line-height: 29px;
+						line-height: 160%;
+						color: #858585;
+
+						@media (max-width: 1439.98px) {
+							font-size: 16px;
+						}
+
+						@media (max-width: 1169.98px) {
+							font-size: 14px;
+						}
+
+						&::before {
+							content: counters(li, ".") ". ";
+							counter-increment: li;
+						}
+
+						&:not(:last-child) {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.table {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			margin: -16px;
+			padding: 16px;
+
+			&::-webkit-scrollbar {
+				width: 0px;
+				height: 0px;
+			}
+		}
+
+		table {
+			width: 100%;
+			margin-top: 10px;
+			table-layout: fixed;
+			border-spacing: unset;
+			border-collapse: unset;
+			min-width: 500px;
+
+			th,
+			td {
+				text-align: left;
+				font-weight: 400;
+				font-size: 16px;
+				// line-height: 24px;
+				line-height: 150%;
+				color: #000;
+				padding: 10px 11px;
+
+				@media (max-width: 1439.98px) {
+					font-size: 14px;
+				}
+
+				@media (max-width: 991.98px) {
+					font-size: 13px;
+				}
+			}
+
+			thead {
+				tr {
+					th {
+						border-bottom: 1px solid #ddd;
+						border-top: 1px solid #ddd;
+						border-right: 1px solid #ddd;
+
+						&:first-child {
+							border-left: 1px solid #ddd;
+						}
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-right: 1px solid #ddd;
+						border-bottom: 1px solid #ddd;
+
+						&:first-child {
+							border-left: 1px solid #ddd;
+							color: #858585;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.rs-rules {
+	padding-top: 0px;
+	margin-top: 0px;
 }
 
 .rs-catalog {
@@ -135,13 +294,13 @@
 
 		// .rs-catalog__filters_spollers
 		&_spollers {
-			padding: 10px 0px 0px 0px;
+			padding: 16px 0px 0px 0px;
 		}
 
 		// .rs-catalog__filters_spollers
 		&_spollers_item {
 			&:not(:last-child) {
-				margin-bottom: 6px;
+				margin-bottom: 12px;
 			}
 
 			a {
@@ -179,13 +338,13 @@
 				}
 
 				&.rs-catalog__filters_spollers_title {
-					color: #000;
-
 					span {
 						color: #858585;
 					}
 
 					&._spoller-active {
+						color: #000;
+
 						&::after {
 							transform: rotate(-90deg);
 						}
@@ -217,7 +376,7 @@
 
 		// .rs-catalog__filters_spollers
 		&_spollers_body {
-			margin-top: 6px;
+			margin-top: 12px;
 
 			ul {
 				padding-left: 32px;
@@ -246,17 +405,13 @@
 						content: "";
 						display: inline-block;
 						position: relative;
-						min-width: 4px;
-						min-height: 4px;
-						max-width: 4px;
-						max-height: 4px;
+						min-width: 5px;
+						min-height: 5px;
+						max-width: 5px;
+						max-height: 5px;
 						border-radius: 50%;
-						background-color: #000;
-						margin-right: 16px;
-
-						@media (max-width: 1169.98px) {
-							margin-right: 10px;
-						}
+						background-color: currentColor;
+						margin-right: 8px;
 					}
 				}
 			}

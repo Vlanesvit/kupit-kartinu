@@ -1,0 +1,158 @@
+.rs-article {
+	margin: 0;
+
+	// .rs-article__container
+	&__container {
+	}
+
+	// .rs-article__head
+	&__head {
+		display: flex;
+		align-items: center;
+	}
+
+	// .rs-article__date
+	&__date {
+		font-weight: 400;
+		font-size: 20px;
+		letter-spacing: 0.03em;
+		color: #858585;
+		margin-right: 20px;
+
+		@media (max-width: 1439.98px) {
+			font-size: 18px;
+			margin-right: 15px;
+		}
+
+		@media (max-width: 1169.98px) {
+			font-size: 16px;
+		}
+	}
+
+	// .rs-article__tag
+	&__tag {
+		border-radius: 3px;
+		padding: 5px 15px;
+		background: #eeeff1;
+		font-weight: 400;
+		font-size: 16px;
+		// line-height: 22px;
+		line-height: 140%;
+		color: #000;
+
+		@media (max-width: 1439.98px) {
+			font-size: 14px;
+		}
+	}
+
+	// .rs-article__wrapper
+	&__wrapper {
+	}
+
+	// .rs-article__block
+	&__block {
+		padding: 50px 0px;
+		margin: -15px;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@media (max-width: 1439.98px) {
+			padding: 30px 0px;
+		}
+
+		@media (max-width: 991.98px) {
+			padding: 15px 0px;
+			margin: -7.5px;
+		}
+
+		&:not(:first-child) {
+			border-top: 1px solid #b7b7b7;
+		}
+	}
+
+	// .rs-article__item
+	&__item {
+		flex: 1 1 50%;
+		padding: 15px;
+
+		@media (max-width: 991.98px) {
+			flex: 0 0 100%;
+		}
+
+		@media (max-width: 991.98px) {
+			padding: 7.5px;
+		}
+
+		h4 {
+			font-weight: 400;
+			font-size: 22px;
+			// line-height: 33px;
+			line-height: 150%;
+			color: #000;
+			margin-bottom: 20px;
+
+			@media (max-width: 1439.98px) {
+				font-size: 20px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 18px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 16px;
+			}
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 18px;
+			// line-height: 29px;
+			line-height: 160%;
+			color: #858585;
+			margin: 15px 0px;
+
+			@media (max-width: 1439.98px) {
+				font-size: 16px;
+				margin: 10px 0px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 13px;
+			}
+		}
+	}
+
+	// .rs-article__desc
+	&__desc {
+	}
+
+	// .rs-article__img
+	&__img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		border: 1px solid #b7b7b7;
+		padding-bottom: 69.6%;
+		margin-bottom: 20px;
+
+		@media (max-width: 1439.98px) {
+			margin-bottom: 15px;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}

@@ -1,3 +1,6 @@
+.rs-about {
+  margin-top: 30px;
+}
 .rs-about__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,5 +101,37 @@
 @media (max-width: 1169.98px) {
   .rs-about__desc p {
     font-size: 13px;
+  }
+}
+.rs-about__desc ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #858585;
+}
+.rs-about__desc ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.rs-about__desc ul li::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  min-width: 4px;
+  min-height: 4px;
+  max-width: 4px;
+  max-height: 4px;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin-right: 16px;
+}
+@media (max-width: 1169.98px) {
+  .rs-about__desc ul li::before {
+    margin-right: 10px;
   }
 }

@@ -1,4 +1,6 @@
 .rs-about {
+	margin-top: 30px;
+
 	// .rs-about__container
 	&__container {
 	}
@@ -83,6 +85,39 @@
 
 			@media (max-width: 1169.98px) {
 				font-size: 13px;
+			}
+		}
+
+		ul {
+			li {
+				display: flex;
+				align-items: center;
+				font-weight: 400;
+				font-size: 18px;
+				// line-height: 29px;
+				line-height: 160%;
+				color: #858585;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				&::before {
+					content: "";
+					display: inline-block;
+					position: relative;
+					min-width: 4px;
+					min-height: 4px;
+					max-width: 4px;
+					max-height: 4px;
+					border-radius: 50%;
+					background-color: currentColor;
+					margin-right: 16px;
+
+					@media (max-width: 1169.98px) {
+						margin-right: 10px;
+					}
+				}
 			}
 		}
 	}

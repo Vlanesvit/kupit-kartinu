@@ -1,0 +1,131 @@
+.rs-accordion {
+	margin: 0;
+
+	// .rs-accordion__container
+	&__container {
+	}
+
+	// .rs-accordion__spollers
+	&__spollers {
+		// .rs-accordion__spollers_item
+		&_item {
+			&:not(:first-child) {
+				border-top: 1px solid #b7b7b7;
+			}
+		}
+
+		// .rs-accordion__spollers_title
+		&_title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			text-align: left;
+			cursor: pointer;
+			padding: 30px 0px;
+			font-family: "Suisse Intl", sans-serif;
+			font-weight: 400;
+			font-size: 22px;
+			// line-height: 24px;
+			line-height: 110%;
+			letter-spacing: 0.05em;
+			color: #1a1a1a;
+
+			@media (max-width: 1439.98px) {
+				font-size: 20px;
+				padding: 20px 0px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 18px;
+				padding: 15px 0px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 16px;
+			}
+
+			span {
+				max-width: 935px;
+			}
+
+			&._spoller-active {
+				i {
+					&::before {
+						transform: translate(-50%, -50%) rotate(-90deg);
+					}
+				}
+			}
+		}
+
+		// .rs-accordion__spollers_icon
+		&_icon {
+			position: relative;
+			max-width: 24px;
+			max-height: 24px;
+			min-width: 24px;
+			min-height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media (max-width: 1439.98px) {
+				max-width: 20px;
+				max-height: 20px;
+				min-width: 20px;
+				min-height: 20px;
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%) rotate(-90deg);
+				width: 1px;
+				height: 100%;
+				background-color: #b7b7b7;
+				transition: all 0.3s ease 0s;
+			}
+
+			&::before {
+				transform: translate(-50%, -50%) rotate(0deg);
+			}
+		}
+
+		// .rs-accordion__spollers_body
+		&_body {
+			padding-bottom: 30px;
+			max-width: 1122px;
+
+			@media (max-width: 1439.98px) {
+				padding: 0px 0px 20px 0px;
+			}
+
+			@media (max-width: 1169.98px) {
+				padding: 0px 0px 15px 0px;
+			}
+
+			p {
+				font-weight: 400;
+				font-size: 18px;
+				// line-height: 29px;
+				line-height: 160%;
+				color: #858585;
+
+				@media (max-width: 1439.98px) {
+					font-size: 16px;
+				}
+
+				@media (max-width: 1169.98px) {
+					font-size: 14px;
+				}
+
+				@media (max-width: 991.98px) {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}

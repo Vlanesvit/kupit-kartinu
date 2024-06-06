@@ -1,10 +1,14 @@
 .rs-auction {
+	@media (min-width: 1169.98px) {
+		margin-top: 50px;
+	}
+
 	&__slider {
 		@media (max-width: 767.98px) {
 			overflow: visible;
 		}
 	}
-	
+
 	// .rs-auction__slide
 	&__slide {
 		.product {
@@ -12,6 +16,38 @@
 			&__picture {
 				padding-bottom: 60.924%;
 			}
+		}
+	}
+
+	&__swiper {
+		&:not(.swiper-wrapper) {
+			display: flex;
+			flex-wrap: wrap;
+			width: auto;
+			margin: -25px -46px;
+
+			@media (max-width: 1439.98px) {
+				margin: -15px;
+			}	
+
+			.rs-auction__slide {
+				padding: 25px 46px;
+				flex: 0 0 50%;
+
+				@media (max-width: 1439.98px) {
+					padding: 15px;
+				}
+
+				@media (max-width: 767.98px) {
+					flex: 0 0 100%;
+				}
+			}
+		}
+	}
+
+	.padding {
+		@media (min-width: 1439.98px) {
+			margin-top: 50px;
 		}
 	}
 }

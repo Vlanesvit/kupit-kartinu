@@ -7,8 +7,9 @@
 
 	// .rs-text-block__wrapper
 	&__wrapper {
-		padding: 64px 0px 25px;
 		border-top: 1px solid #b7b7b7;
+		border-bottom: 1px solid #b7b7b7;
+		padding: 64px 0px 25px;
 
 		@media (max-width: 1439.98px) {
 			padding: 40px 0px 25px;
@@ -26,6 +27,22 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+		}
+
+		.rs-artists-block & {
+			padding: 62px 0px;
+
+			@media (max-width: 1439.98px) {
+				padding: 40px 0px;
+			}
+
+			@media (max-width: 991.98px) {
+				padding: 25px 0px;
+			}
+
+			@media (max-width: 767.98px) {
+				padding: 15px 0px;
+			}
 		}
 	}
 
@@ -51,19 +68,34 @@
 		@media (min-width: 767.98px) {
 			max-width: 880px;
 			margin-left: 30px;
+
+			.rs-artists-block & {
+				margin-right: 30px;
+				margin-left: 0px;
+			}
 		}
 
 		@media (max-width: 767.98px) {
 			margin-top: 15px;
+
+			.rs-artists-block & {
+				margin-top: 0px;
+				margin-bottom: 15px;
+			}
 		}
 
 		h1 {
+			font-family: "Suisse Intl", sans-serif;
 			font-weight: 400;
 			font-size: 50px;
 			// line-height: 55px;
 			line-height: 110%;
 			padding-bottom: 15px;
 			border-bottom: 1px solid #e8e8e8;
+
+			.rs-artists-block & {
+				border: none;
+			}
 
 			@media (max-width: 1439.98px) {
 				font-size: 40px;
@@ -86,6 +118,10 @@
 			line-height: 150%;
 			margin-top: 20px;
 
+			.rs-artists-block & {
+				color: #858585;
+			}
+
 			@media (max-width: 1439.98px) {
 				font-size: 18px;
 			}
@@ -97,6 +133,39 @@
 			@media (max-width: 991.98px) {
 				font-size: 13px;
 				margin-top: 10px;
+			}
+		}
+
+		.rs-text-block__head {
+			margin-bottom: 32px;
+			margin-top: 0px;
+
+			@media (max-width: 1439.98px) {
+				margin-bottom: 20px;
+			}
+
+			@media (max-width: 991.98px) {
+				margin-bottom: 15px;
+			}
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 18px;
+			// line-height: 29px;
+			line-height: 160%;
+			color: #858585;
+
+			@media (max-width: 1439.98px) {
+				font-size: 16px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 13px;
 			}
 		}
 

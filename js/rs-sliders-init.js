@@ -5,11 +5,11 @@
 // Инициализация слайдеров
 function initSliders() {
 	// Перечень слайдеров
-	if (document.querySelector('.rs-slider__slider')) {
+	if (document.querySelector('.rs-slider__slider.swiper')) {
 		const sliderBlocks = document.querySelectorAll('.rs-slider');
 
 		sliderBlocks.forEach(slider => {
-			const sliderSwiper = slider.querySelectorAll('.rs-slider__slider');
+			const sliderSwiper = slider.querySelectorAll('.rs-slider__slider.swiper');
 			const arrowPrev = slider.querySelector('.rs-slider__button-prev');
 			const arrowNext = slider.querySelector('.rs-slider__button-next');
 			const pagination = slider.querySelector('.rs-slider__pagination');
@@ -106,26 +106,26 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.rs-auction__slider')) {
+	if (document.querySelector('.rs-auction__slider.swiper')) {
 		const sliderBlocks = document.querySelectorAll('.rs-auction');
 
 		sliderBlocks.forEach(slider => {
-			const sliderSwiper = slider.querySelectorAll('.rs-auction__slider');
+			const sliderSwiper = slider.querySelectorAll('.rs-auction__slider.swiper');
 			const arrowPrev = slider.querySelector('.rs-auction__button-prev');
 			const arrowNext = slider.querySelector('.rs-auction__button-next');
 			const pagination = slider.querySelector('.rs-auction__pagination');
 
 			sliderSwiper.forEach(swiper => {
 				const swiperMain = new Swiper(swiper, {
-					// Автопрокрутка
-					autoplay: {
-						// Пауза между прокруткой
-						delay: 10000,
-						// Закончить на последнем слайде
-						stopOnLastSlide: false,
-						// Отключить после ручного переключения
-						disableOnInteraction: false,
-					},
+					// // Автопрокрутка
+					// autoplay: {
+					// 	// Пауза между прокруткой
+					// 	delay: 10000,
+					// 	// Закончить на последнем слайде
+					// 	stopOnLastSlide: false,
+					// 	// Отключить после ручного переключения
+					// 	disableOnInteraction: false,
+					// },
 
 					// Обновить свайпер
 					// при изменении элементов слайдера
@@ -195,26 +195,29 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.rs-slider-block__slider')) {
+	if (document.querySelector('.rs-slider-block__slider.swiper')) {
 		const sliderBlocks = document.querySelectorAll('.rs-slider-block');
 
 		sliderBlocks.forEach(slider => {
-			const sliderSwiper = slider.querySelectorAll('.rs-slider-block__slider');
+			const sliderSwiper = slider.querySelectorAll('.rs-slider-block__slider.swiper');
 			const arrowPrev = slider.querySelector('.rs-slider-block__button-prev');
 			const arrowNext = slider.querySelector('.rs-slider-block__button-next');
 			const pagination = slider.querySelector('.rs-slider-block__pagination');
 
+
 			sliderSwiper.forEach(swiper => {
+				let showSlideCount = Number(swiper.getAttribute('data-slidesPerView'));
+
 				const swiperMain = new Swiper(swiper, {
-					// Автопрокрутка
-					autoplay: {
-						// Пауза между прокруткой
-						delay: 10000,
-						// Закончить на последнем слайде
-						stopOnLastSlide: false,
-						// Отключить после ручного переключения
-						disableOnInteraction: false,
-					},
+					// // Автопрокрутка
+					// autoplay: {
+					// 	// Пауза между прокруткой
+					// 	delay: 10000,
+					// 	// Закончить на последнем слайде
+					// 	stopOnLastSlide: false,
+					// 	// Отключить после ручного переключения
+					// 	disableOnInteraction: false,
+					// },
 
 					// Обновить свайпер
 					// при изменении элементов слайдера
@@ -275,7 +278,7 @@ function initSliders() {
 							spaceBetween: 30,
 						},
 						1601.98: {
-							slidesPerView: 3,
+							slidesPerView: showSlideCount,
 							spaceBetween: 110,
 						},
 					},
@@ -284,11 +287,11 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.rs-catalog-slider__slider')) {
+	if (document.querySelector('.rs-catalog-slider__slider.swiper')) {
 		const sliderBlocks = document.querySelectorAll('.rs-catalog-slider');
 
 		sliderBlocks.forEach(slider => {
-			const sliderSwiper = slider.querySelectorAll('.rs-catalog-slider__slider');
+			const sliderSwiper = slider.querySelectorAll('.rs-catalog-slider__slider.swiper');
 			const arrowPrev = slider.querySelector('.rs-catalog-slider__button-prev');
 			const arrowNext = slider.querySelector('.rs-catalog-slider__button-next');
 			const pagination = slider.querySelector('.rs-catalog-slider__pagination');
@@ -296,15 +299,15 @@ function initSliders() {
 
 			sliderSwiper.forEach(swiper => {
 				const swiperMain = new Swiper(swiper, {
-					// Автопрокрутка
-					autoplay: {
-						// Пауза между прокруткой
-						delay: 10000,
-						// Закончить на последнем слайде
-						stopOnLastSlide: false,
-						// Отключить после ручного переключения
-						disableOnInteraction: false,
-					},
+					// // Автопрокрутка
+					// autoplay: {
+					// 	// Пауза между прокруткой
+					// 	delay: 10000,
+					// 	// Закончить на последнем слайде
+					// 	stopOnLastSlide: false,
+					// 	// Отключить после ручного переключения
+					// 	disableOnInteraction: false,
+					// },
 
 					// Кол-во показываемых слайдов
 					slidesPerView: 1,
@@ -397,8 +400,8 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.rs-marquee__slider')) {
-		new Swiper('.rs-marquee__slider', {
+	if (document.querySelector('.rs-marquee__slider.swiper')) {
+		new Swiper('.rs-marquee__slider.swiper', {
 			// Автопрокрутка
 			autoplay: {
 				// Пауза между прокруткой
@@ -460,7 +463,7 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.rs-news__slider')) {
+	if (document.querySelector('.rs-news__slider.swiper')) {
 		// До этой ширины слайдер будет активным
 		const breakpoint = window.matchMedia('(min-width: 991.98px)');
 
@@ -479,7 +482,7 @@ function initSliders() {
 
 		// Инициализация слайдера
 		const enableSwiper = function () {
-			const sliderBlocks = document.querySelectorAll('.rs-news__slider');
+			const sliderBlocks = document.querySelectorAll('.rs-news__slider.swiper');
 
 			sliderBlocks.forEach(slider => {
 				const arrowNext = slider.querySelector('.rs-news__button-next');
@@ -488,15 +491,15 @@ function initSliders() {
 
 				// Перечень слайдеров
 				sliderSwiper = new Swiper(slider, {
-					// Автопрокрутка
-					autoplay: {
-						// Пауза между прокруткой
-						delay: 10000,
-						// Закончить на последнем слайде
-						stopOnLastSlide: false,
-						// Отключить после ручного переключения
-						disableOnInteraction: false,
-					},
+					// // Автопрокрутка
+					// autoplay: {
+					// 	// Пауза между прокруткой
+					// 	delay: 10000,
+					// 	// Закончить на последнем слайде
+					// 	stopOnLastSlide: false,
+					// 	// Отключить после ручного переключения
+					// 	disableOnInteraction: false,
+					// },
 
 					// Обновить свайпер
 					// при изменении элементов слайдера
@@ -561,7 +564,7 @@ function initSliders() {
 		breakpointChecker();
 	}
 
-	if (document.querySelector('.rs-features__slider')) {
+	if (document.querySelector('.rs-features__slider.swiper')) {
 		// До этой ширины слайдер будет активным
 		const breakpoint = window.matchMedia('(min-width: 991.98px)');
 
@@ -580,7 +583,7 @@ function initSliders() {
 
 		// Инициализация слайдера
 		const enableSwiper = function () {
-			const sliderBlocks = document.querySelectorAll('.rs-features__slider');
+			const sliderBlocks = document.querySelectorAll('.rs-features__slider.swiper');
 
 			sliderBlocks.forEach(slider => {
 				const arrowNext = slider.querySelector('.rs-features__button-next');
@@ -589,15 +592,15 @@ function initSliders() {
 
 				// Перечень слайдеров
 				sliderSwiper = new Swiper(slider, {
-					// Автопрокрутка
-					autoplay: {
-						// Пауза между прокруткой
-						delay: 10000,
-						// Закончить на последнем слайде
-						stopOnLastSlide: false,
-						// Отключить после ручного переключения
-						disableOnInteraction: false,
-					},
+					// // Автопрокрутка
+					// autoplay: {
+					// 	// Пауза между прокруткой
+					// 	delay: 10000,
+					// 	// Закончить на последнем слайде
+					// 	stopOnLastSlide: false,
+					// 	// Отключить после ручного переключения
+					// 	disableOnInteraction: false,
+					// },
 
 					// Обновить свайпер
 					// при изменении элементов слайдера
@@ -662,11 +665,11 @@ function initSliders() {
 		breakpointChecker();
 	}
 
-	if (document.querySelector('.rs-product-block__slider')) {
+	if (document.querySelector('.rs-product-block__slider.swiper')) {
 		const sliderBlocks = document.querySelectorAll('.rs-product-block');
 
 		sliderBlocks.forEach(slider => {
-			const sliderSwiper = slider.querySelector('.rs-product-block__slider');
+			const sliderSwiper = slider.querySelector('.rs-product-block__slider.swiper');
 			const thumbsSwiper = slider.querySelector('.rs-product-block__thumbs_slider');
 			const arrowPrev = slider.querySelector('.rs-product-block__button-prev');
 			const arrowNext = slider.querySelector('.rs-product-block__button-next');
@@ -738,7 +741,7 @@ function initSliders() {
 				thumbs: {
 					swiper: swiperThumbs,
 				},
-			
+
 				// Слежка за слайдером
 				watchOverflow: true,
 
