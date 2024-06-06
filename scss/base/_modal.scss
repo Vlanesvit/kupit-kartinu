@@ -72,8 +72,6 @@
 
 	.popup-place-bet & {
 		max-width: 533px;
-
-		
 	}
 
 	.popup-history-bet & {
@@ -341,5 +339,64 @@
 
 	// .popup__confirmed
 	&__confirmed {
+	}
+
+	&__img {
+		width: 73px;
+		height: 73px;
+		margin-bottom: 32px;
+
+		@media (max-width: 1439.98px) {
+			width: 50px;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+
+		svg,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.popup-end {
+	.popup__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		h2 {
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 18px;
+			// line-height: 29px;
+			line-height: 160%;
+			color: #4e4e4e;
+
+			@media (max-width: 1439.98px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 13px;
+			}
+		}
+
+		.rs-btn {
+			margin-top: 32px;
+			width: 100%;
+			padding: 16px 20px;
+
+			@media (max-width: 1439.98px) {
+				margin-top: 20px;
+			}
+		}
 	}
 }
