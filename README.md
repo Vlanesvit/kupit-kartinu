@@ -1,5 +1,3 @@
-# Kupit Kartinu
-
 ## Этап 1
 
 1. [Главная](https://vlanesvit.github.io/kupit-kartinu/home.html)
@@ -23,7 +21,6 @@
 16. [О проекте](https://vlanesvit.github.io/kupit-kartinu/about.html)
 17. [Новости](https://vlanesvit.github.io/kupit-kartinu/news.html)
 18. [Отдельная новость](https://vlanesvit.github.io/kupit-kartinu/news-page.html)
-
 19. [Корзина](https://vlanesvit.github.io/kupit-kartinu/cart.html)
 20. [Оформление заказа](https://vlanesvit.github.io/kupit-kartinu/order.html)
 21. [Модальное - Оформление заказа](https://vlanesvit.github.io/kupit-kartinu/order.html#order-accepted)
@@ -32,7 +29,6 @@
 24. [Регистрация](https://vlanesvit.github.io/kupit-kartinu/sign-up.html)
 25. [Авторизация](https://vlanesvit.github.io/kupit-kartinu/log-in.html)
 26. [Восстановление пароля](https://vlanesvit.github.io/kupit-kartinu/password-recovery.html)
-
 27. [Личный кабинет - Профиль](https://vlanesvit.github.io/kupit-kartinu/profil.html)
 28. [Модальное - Изменение пароля](https://vlanesvit.github.io/kupit-kartinu/profil.html#change-password)
 29. [Личный кабинет - Предложить товар](https://vlanesvit.github.io/kupit-kartinu/offer-product.html)

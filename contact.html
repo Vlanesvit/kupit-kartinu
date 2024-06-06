@@ -674,7 +674,7 @@
 
 		<main class="page">
 
-			<div class="rs-breadcrumbs">	
+			<div class="rs-breadcrumbs">
 				<div class="rs-breadcrumbs__container">
 					<div class="rs-breadcrumbs__block">
 						<nav class="rs-breadcrumbs__navigation">
@@ -700,7 +700,9 @@
 								</li>
 							</ul>
 						</nav>
-						<h1>Контакты</h1>
+						<div class="rs-breadcrumbs__title">
+							<h1>Контакты</h1>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -744,16 +746,17 @@
 											<textarea autocomplete="off" name="user-message" placeholder="Сообщение"
 												class="rs-input"></textarea>
 										</div>
-									</div>
-									<div class="form__footer">
-										<div class="form__agreement">
-											Нажимая кнопку «Отправить» вы соглашаетесь на обработку персональных данных
-											в соответствие с <a href="#">пользовательским соглашением</a>
-										</div>
-										<div class="form__button">
-											<button type="submit" class="rs-btn _btn-primary">
-												<span>Отправить</span>
-											</button>
+										<div class="form__footer">
+											<div class="form__agreement">
+												Нажимая кнопку «Отправить» вы соглашаетесь на обработку персональных
+												данных
+												в соответствие с <a href="#">пользовательским соглашением</a>
+											</div>
+											<div class="form__button">
+												<button type="submit" class="rs-btn _btn-primary">
+													<span>Отправить</span>
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -925,6 +928,7 @@
 
 	<script src="lib/fancybox.umd.js"></script>
 	<script src="lib/aos.js"></script>
+	<script>AOS.init({ duration: 1000, easing: "ease-out-quart", once: true });</script>
 	<script src="lib/swiper-bundle.min.js"></script>
 	<script src="lib/gsap.min.js"></script>
 	<script src="js/rs-sliders-init.js"></script>
