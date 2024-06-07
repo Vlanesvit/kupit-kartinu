@@ -362,6 +362,9 @@
 }
 
 .popup-end {
+	.popup__content {
+		max-width: 533px;
+	}
 	.popup__text {
 		display: flex;
 		flex-direction: column;

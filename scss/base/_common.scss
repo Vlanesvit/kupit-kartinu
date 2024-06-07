@@ -417,6 +417,170 @@ section {
 		width: 100%;
 		position: relative;
 		margin-bottom: 20px;
+		padding-bottom: 14px;
+		border-bottom: 1px solid #b7b7b7;
+	}
+
+	&__row {
+		@media (min-width: 991.98px) {
+			display: flex;
+			justify-content: space-between;
+
+			.form__line {
+				width: 48%;
+			}
+		}
+	}
+
+	&__radios {
+		display: flex;
+		align-items: center;
+		margin-top: 15px;
+
+		.radio {
+			&:not(:last-child) {
+				margin-right: 50px;
+			}
+
+			position: relative;
+
+			label {
+				display: flex;
+				align-items: center;
+
+				input {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					font-size: 0px;
+					opacity: 0;
+					z-index: 1;
+					cursor: pointer;
+
+					&:checked ~ .radio-custom {
+						&::before {
+							transform: translate(-50%, -50%) scale(1);
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			&-custom {
+				display: block;
+				transition: all 0.3s ease 0s;
+				position: relative;
+				min-height: 18px;
+				min-width: 18px;
+				max-height: 18px;
+				max-width: 18px;
+				background-color: transparent;
+				border: 1.5px solid #000;
+				border-radius: 50%;
+				transition: all 0.3s ease 0s;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 12px;
+					height: 12px;
+					background-color: #000;
+					border-radius: inherit;
+					pointer-events: none;
+					top: 50%;
+					left: 50%;
+					opacity: 0;
+					z-index: 1;
+					transform: translate(-50%, -50%) scale(0);
+					transition: ease-out 0.15s;
+				}
+			}
+
+			// .radio-label
+			&-label {
+				font-weight: 400;
+				font-size: 14px;
+				// line-height: 20px;
+				line-height: 140%;
+				color: #000;
+				margin-left: 8px;
+			}
+		}
+	}
+
+	// .form__line-password
+	&__line-password {
+		position: relative;
+		padding-bottom: 22px;
+
+		.rs-input {
+			padding-top: 22px;
+			padding-right: 65%;
+
+			@media (max-width: 1439.98px) {
+				padding-right: 0px;
+			}
+		}
+	}
+
+	// .form__password
+	&__password {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		right: 0;
+		bottom: 14px;
+
+		@media (max-width: 1439.98px) {
+			bottom: 0;
+			position: relative;
+			margin: 10px 0px -10px;
+			margin-left: 12px;
+		}
+
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	// .form__password-view
+	&__password-view {
+		margin-right: 15px;
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: 14px;
+		// line-height: 20px;
+		line-height: 140%;
+		color: #000;
+
+		@media (max-width: 767.98px) {
+			margin-bottom: 10px;
+			justify-content: center;
+			width: 100%;
+		}
+
+		svg {
+			margin-right: 8px;
+		}
+	}
+
+	// .form__password-change
+	&__password-change {
+		@media (max-width: 767.98px) {
+			width: 100%;
+		}
+
+		.rs-btn {
+			padding: 10px 32px;
+
+			@media (max-width: 767.98px) {
+				width: 100%;
+			}
+		}
 	}
 
 	&__footer {
@@ -470,6 +634,157 @@ section {
 			@media (max-width: 991.98px) {
 				width: 100%;
 				padding: 14px 20px;
+			}
+		}
+	}
+
+	&__line-desc {
+		.rs-input {
+			padding-right: 15%;
+		}
+	}
+
+	&__line-radio {
+		border: none;
+	}
+
+	// .form__pin
+	&__pin {
+		.form__upload_btn {
+			position: absolute;
+			bottom: 14px;
+			right: 0;
+			margin-top: 0px;
+		}
+
+		.upload__btn {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-weight: 400;
+			font-size: 14px;
+			// line-height: 20px;
+			line-height: 140%;
+			color: #858585;
+
+			svg {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	// .form__upload
+	&__upload {
+		padding: 17px 32px;
+		background: #eeeff1;
+
+		@media (max-width: 1439.98px) {
+			padding: 20px;
+		}
+
+		// .form__upload_btn
+		&_btn {
+			position: relative;
+
+			@media (max-width: 991.98px) {
+				margin-top: 10px;
+			}
+
+			.rs-btn {
+				padding: 11px 32px;
+			}
+		}
+
+		&_head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@media (max-width: 991.98px) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+
+			h4 {
+				font-weight: 400;
+				font-size: 22px;
+				// line-height: 31px;
+				line-height: 140%;
+				color: #000;
+
+				@media (max-width: 1439.98px) {
+					font-size: 20px;
+				}
+
+				@media (max-width: 1169.98px) {
+					font-size: 18px;
+				}
+
+				@media (max-width: 991.98px) {
+					font-size: 16px;
+				}
+			}
+
+			p {
+				font-weight: 400;
+				font-size: 16px;
+				// line-height: 22px;
+				line-height: 140%;
+				color: #858585;
+
+				@media (max-width: 1439.98px) {
+					font-size: 14px;
+				}
+
+				@media (max-width: 991.98px) {
+					font-size: 13px;
+				}
+			}
+		}
+
+		&_title {
+		}
+	}
+
+	.upload {
+		.upload__input {
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			font-size: 0px;
+			z-index: 100;
+		}
+
+		.upload__preview {
+			&._ready-files {
+				display: grid;
+				grid-template-columns: repeat(6, 1fr);
+				gap: 15px;
+				max-width: 100%;
+				margin: 15px 0;
+
+				@media (max-width: 540px) {
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				.upload__file {
+					height: 100px;
+					position: relative;
+					background-color: rgba(225, 225, 225, 1);
+				}
+
+				img,
+				video {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					max-width: 100%;
+				}
 			}
 		}
 	}
@@ -550,8 +865,7 @@ section {
 	width: 100%;
 	transition: 0.3s ease 0s;
 	transition-property: background-color, border-color;
-	border-bottom: 1px solid #b7b7b7;
-	padding: 16px 12px;
+	padding: 14px 12px 0px;
 	background-color: transparent;
 	font-weight: 400;
 	font-size: 16px;
@@ -571,8 +885,26 @@ section {
 	}
 }
 
+.rs-input-label {
+	font-weight: 400;
+	font-size: 16px;
+	// line-height: 22px;
+	line-height: 140%;
+	color: #000;
+	display: block;
+	margin-bottom: 5px;
+
+	@media (max-width: 1439.98px) {
+		font-size: 14px;
+	}
+
+	@media (max-width: 991.98px) {
+		font-size: 13px;
+	}
+}
+
 textarea.rs-input {
-	resize: vertical;
+	resize: none;
 	min-height: 148px;
 }
 

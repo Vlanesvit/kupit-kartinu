@@ -42,7 +42,7 @@
   }
 }
 @media (min-width: 991.98px) {
-  .rs-grid-block__filter_item:first-child .radio__label {
+  .rs-grid-block__filter_item:first-child .radio-label {
     width: auto !important;
     border: none !important;
     background-color: #fff !important;
@@ -50,7 +50,7 @@
   }
 }
 @media (max-width: 991.98px) {
-  .rs-grid-block__filter_item:first-child .radio__label {
+  .rs-grid-block__filter_item:first-child .radio-label {
     width: 100%;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -71,11 +71,11 @@
   z-index: 1;
   cursor: pointer;
 }
-.rs-grid-block__filter_item .radio label input:checked ~ .radio__label {
+.rs-grid-block__filter_item .radio label input:checked ~ .radio-label {
   background-color: #000;
   color: #fff;
 }
-.rs-grid-block__filter_item .radio__label {
+.rs-grid-block__filter_item .radio-label {
   width: 40px;
   height: 40px;
   border: 1px solid #000;
@@ -96,7 +96,7 @@
   transition: all 0.3s ease 0s;
 }
 @media (max-width: 1439.98px) {
-  .rs-grid-block__filter_item .radio__label {
+  .rs-grid-block__filter_item .radio-label {
     font-size: 12px;
     width: 30px;
     height: 30px;
