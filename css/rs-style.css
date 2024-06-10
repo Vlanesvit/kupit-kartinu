@@ -695,6 +695,9 @@ section {
   padding-bottom: 14px;
   border-bottom: 1px solid #b7b7b7;
 }
+.form__line._form-error {
+  border-bottom-color: #f00;
+}
 @media (min-width: 991.98px) {
   .form__row {
     display: -webkit-box;
@@ -706,6 +709,37 @@ section {
   }
   .form__row .form__line {
     width: 48%;
+  }
+}
+.form__error {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 14px;
+  right: 0;
+}
+.form__error::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url("../../img/icons/error-val.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 8px;
+}
+@media (max-width: 991.98px) {
+  .form__error {
+    font-size: 13px;
   }
 }
 .form__radios {
@@ -937,35 +971,8 @@ section {
     padding: 14px 20px;
   }
 }
-.form__line-desc .rs-input {
-  padding-right: 15%;
-}
 .form__line-radio {
   border: none;
-}
-.form__pin .form__upload_btn {
-  position: absolute;
-  bottom: 14px;
-  right: 0;
-  margin-top: 0px;
-}
-.form__pin .upload__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  color: #858585;
-}
-.form__pin .upload__btn svg {
-  margin-left: 8px;
 }
 .form__upload {
   padding: 17px 32px;
@@ -1062,28 +1069,86 @@ section {
 }
 .form .upload .upload__preview._ready-files {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   max-width: 100%;
-  margin: 15px 0;
+  margin-top: 30px;
+  padding-right: 128px;
+}
+@media (max-width: 1439.98px) {
+  .form .upload .upload__preview._ready-files {
+    padding-right: 0px;
+    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 @media (max-width: 540px) {
   .form .upload .upload__preview._ready-files {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 }
 .form .upload .upload__preview._ready-files .upload__file {
-  height: 100px;
+  padding-bottom: 73.5%;
   position: relative;
-  background-color: rgb(225, 225, 225);
+  border: 1.5px solid #b7b7b7;
 }
 .form .upload .upload__preview._ready-files img,
 .form .upload .upload__preview._ready-files video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   max-width: 100%;
+}
+.form .upload.form__pin .form__upload_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0px;
+}
+.form .upload.form__pin .upload__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #858585;
+}
+.form .upload.form__pin .upload__btn svg {
+  margin-left: 8px;
+}
+.form .upload.form__pin .upload__preview._ready-files {
+  grid-template-columns: repeat(11, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  padding-right: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (max-width: 1439.98px) {
+  .form .upload.form__pin .upload__preview._ready-files {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-width: 540px) {
+  .form .upload.form__pin .upload__preview._ready-files {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.form .upload.form__pin .upload__preview._ready-files .upload__file {
+  padding-bottom: 65.7%;
 }
 
 .checkbox label {
@@ -1092,6 +1157,10 @@ section {
   display: flex;
   cursor: pointer;
   position: relative;
+}
+.checkbox label .form__error {
+  bottom: auto;
+  top: calc(100% + 5px);
 }
 .checkbox input {
   position: absolute;

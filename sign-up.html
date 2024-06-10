@@ -710,50 +710,54 @@
 									<div class="form__line">
 										<label class="rs-input-label">Имя*</label>
 										<input autocomplete="off" type="text" name="user-name" placeholder="Иван"
-											class="rs-input" required>
+											class="rs-input" data-placeholder-nohide data-validate data-required>
 									</div>
 									<div class="form__line">
 										<label class="rs-input-label">Фамилия</label>
 										<input autocomplete="off" type="text" name="user-last-name" placeholder="Иванов"
-											class="rs-input">
+											class="rs-input" data-placeholder-nohide>
 									</div>
 									<div class="form__line">
 										<label class="rs-input-label">E-mail*</label>
 										<input autocomplete="off" type="email" name="user-mail"
-											placeholder="mai@mail.ru" class="rs-input" required>
+											placeholder="mai@mail.ru" class="rs-input" data-placeholder-nohide
+											data-validate data-required="email">
 									</div>
 									<div class="form__line">
 										<label class="rs-input-label">Телефон*</label>
 										<input autocomplete="off" type="tel" name="user-phone"
-											placeholder="+7 (000) 000-00-00" class="rs-input" required>
+											placeholder="+7 (000) 000-00-00" class="rs-input" data-placeholder-nohide
+											data-validate data-required="phone">
 									</div>
 								</div>
 								<div class="form__block">
 									<div class="form__line">
 										<label class="rs-input-label">Страна</label>
 										<input autocomplete="off" type="text" name="user-country" placeholder="Россия"
-											class="rs-input">
+											class="rs-input" data-placeholder-nohide>
 									</div>
 									<div class="form__line">
 										<label class="rs-input-label">Город</label>
 										<input autocomplete="off" type="text" name="user-city"
-											placeholder="Санкт-Петербург" class="rs-input">
+											placeholder="Санкт-Петербург" class="rs-input" data-placeholder-nohide>
 									</div>
 									<div class="form__line">
 										<label class="rs-input-label">Пароль*</label>
 										<input autocomplete="off" type="password" name="user-password"
-											placeholder="********" class="rs-input" required>
+											placeholder="********" class="rs-input" data-placeholder-nohide
+											data-validate data-required>
 									</div>
 									<div class="form__line">
 										<label class="rs-input-label">Подтверждение пароля*</label>
-										<input autocomplete="off" type="password" name="user-password-copy"
-											placeholder="********" class="rs-input" required>
+										<input autocomplete="off" type="password" name="user-password-confirmation"
+											placeholder="********" class="rs-input" data-placeholder-nohide
+											data-validate data-required="password-confirmation">
 									</div>
 									<div class="form__footer">
 										<div class="form__agreement">
 											<div class="checkbox">
 												<label>
-													<input type="checkbox" required>
+													<input type="checkbox">
 													<span class="checkbox-custom"></span>
 													<span class="checkbox-label">Нажимая на кнопку
 														«Зарегистрироваться», вы подтверждаете согласие обработку
@@ -873,6 +877,8 @@
 	<script src="lib/gsap.min.js"></script>
 	<script src="js/rs-sliders-init.js"></script>
 	<script src="js/timer.js"></script>
+	<script src="js/rs-validate-form.js"></script>
+	<script src="js/rs-preview-file.js"></script>
 	<script src="js/rs-script.js"></script>
 
 </body>
